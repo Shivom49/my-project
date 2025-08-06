@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Student Registration Form</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Student Registration Form </h1>
+    <h2>Student Registration Form</h2>
+    <form action="/submit" method="post">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required minlength="3" maxlength="21"><br><br>
 
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="10" max="100" required><br><br>
 
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+     <form action="/submit" method="post">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required minlength="3" maxlength="21"><br><br>
 
-    <button type="submit">Register</button>
-    <button type="reset">reset</button>
-  </form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="10" max="100" required><br><br>
 
-
-
-
-
-
-   <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
-
-    <button type="submit">Register</button>
-    <button type="reset">reset</button>
-  </form>
-
-
-
-  
-
+        <input type="submit" value="Submit">
+    </form> 
 </body>
 </html>

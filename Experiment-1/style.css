@@ -1,19 +1,31 @@
-form {
-    background-color: rgb(214, 124, 50);
-    width: 300px;
-    height: 200px;
-    border: 30px ridge red;
-    border-radius: 10px;
-    padding: 50px;
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-}
-body {
-    background-color: rgb(235, 162, 103);
-    display: flex ;
+
+ body {
+    
+    background-color: antiquewhite;
     flex-direction: column;
     justify-content: space-around;
     
+   
+     
+}
 
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+}  
+form{
+    background-color: rgb(85, 176, 176);
+    margin: 20px,60px;
+    padding: 40px,60px;
+    max-width: 300px;
+    height: 250px;
+    border:30px , ridge,red;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 160px;
+    display: flex; 
+    flex-direction: column; 
+    
+    
 }
