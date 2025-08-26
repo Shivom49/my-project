@@ -1,0 +1,20 @@
+This project is a small web application that displays a list of products and allows filtering them by category. It is created using HTML for structure, CSS for design, and JavaScript for interactivity.
+
+HTML Part:
+Defines the layout – a heading, a dropdown menu for selecting categories, and an empty list where products will appear.
+
+CSS Part:
+Styles the page with a clean interface. It centers the container, adds padding, shadows, and rounded corners. The product items are displayed as neat cards with spacing and hover effects for a modern look.
+
+JavaScript Part:
+Handles the logic of filtering products.
+
+A product array stores names and categories.
+
+The renderProducts() function shows products based on the selected category.
+
+If “All” is chosen, everything is displayed. Otherwise, only items of that category are shown.
+
+If no product exists in a category, a message is displayed.
+
+An event listener updates the product list whenever the user changes the dropdown option.

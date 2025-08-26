@@ -1,0 +1,27 @@
+This project is a Freehand Drawing Application built using HTML, CSS, and JavaScript with SVG (Scalable Vector Graphics). It allows users to draw freely on a canvas by dragging their mouse, similar to a simple paint tool.
+
+HTML Part:
+
+Sets up the page with a heading and an <svg> element that acts as the drawing canvas.
+
+The SVG element provides a scalable and resolution-independent surface for drawing paths.
+
+CSS Part:
+
+Styles the page with a clean look.
+
+The drawing canvas has a border, a white background, and a crosshair cursor to make drawing easier.
+
+Basic spacing and text styling are added for readability.
+
+JavaScript Part (Core Logic):
+
+Handles the drawing process by listening to mouse events (mousedown, mousemove, mouseup, mouseleave).
+
+On mousedown, a new SVG <path> is created, starting at the mouse position.
+
+On mousemove, as the user drags the mouse, new line segments (L x,y) are added to the path, creating a continuous stroke.
+
+On mouseup or mouseleave, the drawing stops.
+
+A helper function calculates the mouse position relative to the canvas.
