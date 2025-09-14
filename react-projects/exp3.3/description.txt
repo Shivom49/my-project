@@ -1,0 +1,13 @@
+In this experiment, I implemented object-oriented programming concepts in JavaScript using ES6 classes and inheritance.
+
+A base class Person was created with common properties (name, age) and a method introduce().
+
+Two subclasses were derived:
+
+Student → extended Person, added a grade property and a study() method.
+
+Teacher → extended Person, added a subject property and a teach() method.
+
+The project was integrated with HTML + CSS + JavaScript so that users could click buttons to display Student and Teacher details.
+
+This experiment gave me hands-on experience with OOP principles like inheritance, constructor chaining, and method overriding in JavaScript.

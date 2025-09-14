@@ -1,0 +1,15 @@
+In this experiment, I built a Library Management system UI using React with the following features:
+
+Search: Filter books by title or author dynamically.
+
+Add Book: Enter new book details and add them to the list.
+
+Remove Book: Delete books from the list using a button.
+
+The initial book list contained sample data such as 1984, The Great Gatsby, and To Kill a Mockingbird.
+
+The project helped me practice state management with React hooks (useState) and event handling.
+
+I also worked on proper UI design with CSS to make it match the expected output and align the component in the center of the browser.
+
+This experiment strengthened my skills in React state handling, forms, and list rendering.

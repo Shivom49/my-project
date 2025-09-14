@@ -1,0 +1,9 @@
+In this experiment, I created a React component called ProductCard to display product details such as name, price, and stock status using props.
+
+The main objective was to understand reusability of components and how props are used to pass data.
+
+I displayed a list of products (Wireless Mouse, Keyboard, and Monitor) inside a parent component App.
+
+Styling was applied using CSS to arrange the products in card format with proper alignment.
+
+Through this, I learned how to design reusable UI components and display data dynamically in React.

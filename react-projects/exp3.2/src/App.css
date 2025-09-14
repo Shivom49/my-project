@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;                 /* remove default margin */
+  height: 100vh;             /* full viewport height */
+  display: flex;             
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;   /* white background */
+  color: #000;        /* black text */
+  padding: 20px;
+}
+
+/* Main container */
+.library-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background: #fff;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.search-input,
+.add-book input {
+  padding: 8px;
+  margin: 5px 5px 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;   /* force white background */
+  color: #000;        /* force black text */
+}
+
+/* Add book form */
+.add-book {
+  margin-bottom: 20px;
+}
+
+.add-book button {
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-book button:hover {
+  background: #0056b3;
+}
+
+/* Book list */
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+  color: #000;   /* make sure text is visible */
+}
+
+.book-list button {
+  padding: 6px 10px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-list button:hover {
+  background: #a71d2a;
+}
