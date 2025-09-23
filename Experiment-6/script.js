@@ -9,15 +9,15 @@ svgCanvas.addEventListener("mousedown", (e) => {
   currentPath.setAttribute("stroke", "black");
   currentPath.setAttribute("stroke-width", "2");
   currentPath.setAttribute("fill", "none");
-  currentPath.setAttribute("d", M${x},${y}); // Start the path
+  currentPath.setAttribute("d", `M${x},${y}`); // ✅ fixed with backticks
   svgCanvas.appendChild(currentPath);
 });
 
 svgCanvas.addEventListener("mousemove", (e) => {
-  if (!isDrawing) return;
+  if (!isDrawing || !currentPath) return; // ✅ safety check
   const { x, y } = getMousePosition(e);
   const d = currentPath.getAttribute("d");
-  currentPath.setAttribute("d", ${d} L${x},${y});
+  currentPath.setAttribute("d", `${d} L${x},${y}`); // ✅ fixed with backticks
 });
 
 svgCanvas.addEventListener("mouseup", () => {
@@ -28,7 +28,7 @@ svgCanvas.addEventListener("mouseleave", () => {
   isDrawing = false;
 });
 
-// Helper function to get relative mouse position
+// Helper: relative mouse position inside SVG
 function getMousePosition(evt) {
   const rect = svgCanvas.getBoundingClientRect();
   return {

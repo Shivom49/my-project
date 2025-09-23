@@ -1,0 +1,51 @@
+This project demonstrates how to build a responsive Admin Dashboard using HTML and CSS with a Dark Mode toggle feature. The layout is created using CSS Grid, and color theming is controlled with CSS custom properties (variables).
+
+Features Implemented
+
+HTML Structure
+
+The dashboard is divided into four main sections:
+
+Header → Contains the dashboard title and dark mode toggle.
+
+Sidebar (Navigation) → Links to Home, User, and Settings pages.
+
+Main Content → Displays the admin welcome message and page content.
+
+Footer → Copyright information.
+
+A checkbox (#darkModeToggle) is used to control dark mode styling via CSS.
+
+CSS Styling & Layout
+
+CSS Grid Layout:
+
+Defines header, sidebar, main, and footer using grid-template-areas.
+
+Custom Properties (CSS Variables):
+
+Default header color: #5eb5c0.
+
+When dark mode is toggled, header color changes to #4f2c50.
+
+Sidebar Styling:
+
+Vertical navigation menu with spacing (gap: 100px).
+
+Responsive Design:
+
+Layout adapts to full height (100vh) and organizes content neatly.
+
+Dark Mode Toggle (CSS-Only Implementation)
+
+The checkbox input acts as the switch.
+
+When checked (input:checked ~ .dashboard), the CSS variable --bg-color-header changes, altering the dashboard theme.
+
+Demonstrates theme switching without JavaScript.
+
+Execution
+
+By default, the dashboard opens in light mode.
+
+When the toggle is activated, the theme switches to dark mode dynamically.

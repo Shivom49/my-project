@@ -1,0 +1,51 @@
+This project implements a simple Ticket Booking System API using Node.js with the Express framework. The system simulates the process of booking seats with the following core features:
+
+Seat Initialization
+
+The system starts with 10 seats stored in memory.
+
+Each seat has the following properties:
+
+id: Unique seat number
+
+status: Can be available, locked, or booked
+
+lockedBy: The user who locked the seat
+
+lockTimeout: A timer reference for automatic release
+
+API Endpoints
+
+GET / → Welcome message and instructions.
+
+GET /seats → Returns the current status of all seats.
+
+POST /lock/:id → Locks a specific seat for a user for 10 seconds.
+
+If the user does not confirm within 10 seconds, the seat automatically becomes available again.
+
+POST /confirm/:id → Confirms a locked seat and marks it as booked.
+
+The seat can only be confirmed by the user who locked it.
+
+POST /release/:id → Allows a user to manually release their locked seat before confirmation.
+
+Locking Mechanism
+
+When a seat is locked, a setTimeout function is triggered for 10 seconds.
+
+If the seat is not confirmed within this time, it is automatically reset to available.
+
+This prevents indefinite seat blocking.
+
+Error Handling
+
+If a user tries to lock an already booked or locked seat, an error message is returned.
+
+If a different user tries to confirm or release a seat locked by someone else, the request is rejected.
+
+Execution
+
+The server runs on http://localhost:3000.
+
+JSON is used for request and response formats.

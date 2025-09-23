@@ -1,0 +1,51 @@
+This project demonstrates how to create a dynamic product listing page with a filter-by-category feature using HTML, CSS, and JavaScript. The system displays a list of products and allows users to filter them based on selected categories such as T-Shirts, Jeans, Electronics, and Books.
+
+Features Implemented
+
+HTML Structure
+
+The page consists of:
+
+A title (h1) for the product list.
+
+A filter dropdown (select) for category selection.
+
+An unordered list (ul) where products are dynamically displayed.
+
+JavaScript Functionality
+
+A predefined array of products is created with name and category.
+
+Dynamic Rendering:
+
+Products are displayed in the list using DOM manipulation.
+
+Filter Feature:
+
+The renderProducts() function filters products based on the selected category.
+
+If "All" is selected, every product is shown.
+
+If no products match, a message “No products found in this category” is displayed.
+
+Event Handling:
+
+The change event on the dropdown triggers re-rendering of the product list.
+
+CSS Styling
+
+A clean, modern design with:
+
+Centered container with padding, rounded corners, and shadow.
+
+Styled dropdown (select) for category filtering.
+
+Product items (li) styled with borders, spacing, and hover transition.
+
+Uses responsive layout with a max-width of 600px for better readability.
+
+Execution
+
+When the page loads, all products are shown by default.
+
+Users can filter the products dynamically without refreshing the page.
