@@ -28,5 +28,3 @@ jobs:
 
       - name: Run Tests (optional)
         run: npm test --prefix docker-projects/exp9.1 --if-present
-
-  
