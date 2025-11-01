@@ -1,0 +1,71 @@
+CI/CD (Continuous Integration / Continuous Deployment) automates software delivery.
+Whenever code is pushed to the repository, GitHub Actions triggers a workflow defined in a .yml file that:
+
+Checks out the code.
+
+Installs dependencies and builds the React app.
+
+Builds a Docker image using docker buildx.
+
+Pushes the image to Docker Hub automatically using secure credentials.
+
+This process ensures that each new version of the app is automatically containerized and available for deployment without manual Docker commands.
+
+Software / Tools Used:
+
+GitHub Actions – for workflow automation
+
+Docker Hub – for image hosting
+
+Docker Desktop – for local verification
+
+Node.js 18 – for React build process
+
+VS Code / Terminal – for development
+
+Procedure:
+
+Created a folder structure:
+
+my-project/
+  └── .github/
+      └── workflows/
+          └── ci-cd.yml
+
+
+Added the workflow file with build and deploy jobs.
+
+Set up GitHub repository secrets:
+
+DOCKER_USERNAME → Docker Hub username
+
+DOCKER_PASSWORD → Docker Hub access token
+
+Committed and pushed the workflow file:
+
+git add .
+git commit -m "Added CI/CD pipeline workflow"
+git push
+
+
+GitHub Actions automatically ran the pipeline:
+
+Installed dependencies (npm install)
+
+Built React app (npm run build)
+
+Built Docker image using docker buildx build with proper context
+
+Pushed image to Docker Hub (shivomparashari/my-project:latest)
+
+Verified success in Actions tab (green checkmark) and Docker Hub repository.
+
+Result:
+
+Successfully implemented a CI/CD pipeline that automatically:
+
+Builds and tests the React app on every push.
+
+Builds a Docker image and deploys it to Docker Hub.
+
+Reduces manual deployment effort and ensures continuous delivery of updated builds.
