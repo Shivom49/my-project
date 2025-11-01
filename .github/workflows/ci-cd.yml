@@ -1,66 +1,56 @@
-name: Build React App (Experiment-3.1)
+name: My Project CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
     paths:
-      - 'React-Projects/Experiment-3.1/**'
+      - 'docker-projects/exp9.1/**'
   pull_request:
-    branches:
-      - main
     paths:
-      - 'React-Projects/Experiment-3.1/**'
+      - 'docker-projects/exp9.1/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: React-Projects/Experiment-3.1
-
-      permissions:
-        contents: read
-        packages: write
-        
     steps:
-      # Step 1: Checkout code
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '18'
 
-      # Step 3: Install dependencies and build React app
-      - name: Install dependencies and build
-        run: |
-          npm ci
-          npm run build
+      - name: Install Dependencies
+        run: npm install --prefix docker-projects/exp9.1
 
-      # Step 4: Build Docker image
+      - name: Build React App
+        run: npm run build --prefix docker-projects/exp9.1
+
+      - name: Run Tests (optional)
+        run: npm test --prefix docker-projects/exp9.1 --if-present
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Build Docker Image
         run: |
-          docker build -t react-experiment-3-1 .
-      
-      - name: Check Docker Username (for debug only)
-        run: echo "Docker user is $DOCKER_USERNAME"
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          docker buildx build --load \
+            -t ${{ secrets.DOCKER_USERNAME }}/my-project:latest \
+            -f ./docker-projects/exp9.1/Dockerfile \
+            ./docker-projects/exp9.1
 
-      # Step 5 (Optional): Push to Docker Hub
-      - name: Login to Docker Hub
-        if: github.ref == 'refs/heads/main'
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Push Image to Docker Hub
-        if: github.ref == 'refs/heads/main'
-        run: |
-          docker tag react-experiment-3-1 ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-3-1:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-3-1:latest
-
+      - name: Push Docker Image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-project:latest
