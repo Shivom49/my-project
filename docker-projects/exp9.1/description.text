@@ -47,3 +47,7 @@ docker images
 Ran the container:
 
 docker run -p 8080:80 exp9.1
+
+
+Checked the output in browser at http://localhost:8080
+.
