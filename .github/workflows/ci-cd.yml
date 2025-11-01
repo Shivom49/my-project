@@ -44,16 +44,8 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-<<<<<<< HEAD
-=======
 
-      - name: Build Docker Image
-        run: |
-          docker buildx create --use
-          docker buildx build --load -t ${{ secrets.DOCKER_USERNAME }}/my-project:latest -f ./docker-projects/exp9.1/Dockerfile ./docker-projects/exp9.1
->>>>>>> fb5c1ebe809c21b112ee4877b69946ac7bbc6a65
-
-      - name: Build Docker Image
+      - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
           context: ./docker-projects/exp9.1
