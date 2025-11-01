@@ -1,0 +1,13 @@
+This project is about creating a student registration form using HTML for structure and CSS for styling. The form collects student details such as Name, Email, and Age and includes built-in validation.
+
+The HTML form uses input types like text, email, and number. Validation is handled with attributes:
+
+required ensures fields cannot be left empty.
+
+minlength and maxlength restrict the length of the name.
+
+min and max limit the age between 10 and 100.
+
+The CSS part improves the design by setting a background color (antiquewhite), centering the form, adding padding, margin, and rounded corners. Flexbox (display: flex; flex-direction: column;) is used to align form elements neatly, and the heading is styled for better readability.
+
+When submitted, the form sends data to /submit (backend can be added later). This experiment shows how HTML5 form validation combined with CSS styling can create a user-friendly and well-structured registration form.

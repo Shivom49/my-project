@@ -1,0 +1,28 @@
+This project is a Live Character Counter Web Application built using HTML, CSS, and JavaScript.
+
+HTML (index.html):
+The structure of the webpage is created with HTML. It includes:
+
+A heading (<h2>) titled Live Character Counter.
+
+A <textarea> input field where users can type text.
+
+A <div> displaying the total number of characters typed, which updates dynamically.
+
+JavaScript (script.js):
+The function showcount() is triggered whenever the user types in the textarea (using the oninput event).
+
+It takes the current value of the textarea.
+
+Calculates its length (number of characters).
+
+Updates the <span id="charcount"> to show the live character count on the screen.
+
+CSS (style.css):
+The design of the webpage is handled with CSS.
+
+The .container class centers and styles the main section.
+
+The <textarea> is styled with padding, border, and fixed height for a neat input box.
+
+The character counter is styled to look clean and bold for easy visibility.

@@ -1,0 +1,110 @@
+Objective
+
+To implement secure authentication and authorization in a Node.js application using JWT (JSON Web Token) and middleware. The experiment also includes creating a simple Banking API with features like balance check, deposit, withdrawal, and transfer, accessible only to authenticated users.
+
+🔹 Software / Tools Required
+
+Node.js (Backend runtime)
+
+Express.js (Web framework)
+
+MongoDB + Compass (Database & GUI)
+
+Thunder Client / Postman (API testing tool)
+
+VS Code (Code editor)
+
+🔹 Procedure
+1. Project Setup
+
+Create a new project folder (e.g., Exp-JWT-Banking).
+
+Initialize Node.js project:
+
+npm init -y
+
+
+Install dependencies:
+
+npm install express mongoose jsonwebtoken bcryptjs
+
+
+Create main file server.js.
+
+2. MongoDB Setup
+
+Start MongoDB server (default port 27017).
+
+Open MongoDB Compass → Connect to mongodb://localhost:27017/.
+
+Create database bankdb and collection users.
+
+This will store user data with balance.
+
+3. Server.js File
+
+Write Express.js code with:
+
+JWT Authentication
+
+Middleware for token verification
+
+Banking operations (CRUD)
+
+🔑 Middleware ensures that only valid token holders can access protected routes.
+
+4. Routes Implemented
+
+Public Route → /public
+
+No authentication required.
+
+Login Route → /login
+
+User provides username + password.
+
+Server generates JWT token.
+
+Protected Routes (with JWT token):
+
+/balance → Check balance.
+
+/deposit → Add money.
+
+/withdraw → Deduct money.
+
+/transfer → Transfer between users.
+
+5. API Testing with Thunder Client
+
+Login to get Token
+
+Method: POST http://localhost:4000/login
+
+Body (JSON):
+
+{
+  "username": "Shivom",
+  "password": "password123"
+}
+
+
+Response contains a JWT token.
+
+Use Token in Authorization Header
+
+Go to Headers tab → Add:
+
+Key: Authorization
+Value: Bearer <your_token_here>
+
+
+Test Operations
+
+GET /balance → Shows current balance.
+
+POST /deposit (with body {"amount": 250}) → Adds money.
+
+POST /withdraw (with body {"amount": 100}) → Deducts money.
+
+POST /transfer (with body of fromUserId, toUserId, amount) → Transfers balance.

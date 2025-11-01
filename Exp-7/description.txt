@@ -1,0 +1,77 @@
+Title: Real-Time Chat Application using Axios & Socket.io
+
+Objective:
+
+To develop a full-stack real-time chat application that enables multiple users to send and receive messages instantly using WebSocket connections. The app demonstrates two-way communication between the server and clients through Socket.io, while Axios is used to retrieve previously stored messages via REST API.
+
+Technology Stack:
+
+Frontend: React (Vite), JavaScript, HTML5, CSS3
+
+Backend: Node.js, Express.js, Socket.io
+
+Libraries Used: axios, socket.io-client, cors
+
+Port: 5000 (server), 5173 (client)
+
+Description:
+
+This experiment demonstrates how real-time communication works between the client and the server using WebSockets.
+The backend is built with Node.js and Express, where Socket.io handles event-based communication.
+The frontend is made using React, where users can enter their name, type a message, and instantly see updates from other connected users without page refresh.
+
+Messages are fetched initially through a REST API (/api/messages) using Axios, and new messages are exchanged live through Socket.io.
+Each message is stored with:
+
+user name
+
+message text
+
+timestamp (ts)
+
+unique sender ID (socket.id)
+
+To prevent duplication, the app filters out messages sent by the same client based on senderId.
+Whenever a user sends a message, it appears instantly on their own screen and is broadcasted to all other users in real-time.
+
+Features Implemented:
+
+Real-time two-way communication using Socket.io.
+
+Axios GET request to load previous chat history.
+
+Instant message update without page reload.
+
+Multiple user connections supported simultaneously.
+
+Auto-scroll to latest message.
+
+Modern centered UI with user-specific message bubbles.
+
+Duplicate message prevention using senderId.
+
+Message structure includes: { id, user, text, ts, senderId }.
+
+Flow of Execution:
+
+Start backend:
+
+node server.js
+
+
+→ Server runs on http://localhost:5000
+
+Start frontend:
+
+npm run dev
+
+
+→ React app runs on http://localhost:5173
+
+Open two browser tabs → Enter different names (e.g., Shivom & Aman).
+
+Send messages → Both users see updates instantly.
+
+Check terminal → Displays user connect/disconnect logs.
+
+(Optional) Use Thunder Client → GET http://localhost:5000/api/messages to see all stored messages.

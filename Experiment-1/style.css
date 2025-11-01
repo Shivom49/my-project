@@ -1,0 +1,31 @@
+
+ body {
+    
+    background-color: antiquewhite;
+    flex-direction: column;
+    justify-content: space-around;
+    
+   
+     
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+}  
+form{
+    background-color: rgb(85, 176, 176);
+    margin: 20px,60px;
+    padding: 40px,60px;
+    max-width: 300px;
+    height: 250px;
+    border:30px , ridge,red;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 160px;
+    display: flex; 
+    flex-direction: column; 
+    
+    
+}

@@ -1,0 +1,69 @@
+ FEATURE: Person Class Hierarchy Component
+
+The application demonstrates the concept of inheritance in JavaScript using ES6 classes within a React component.
+
+It introduces a base `Person` class with properties like name and age, along with subclasses `Student` and `Teacher` that extend `Person`.
+
+The React component (`App.tsx`) provides an interactive UI where users can click buttons to view details of either a Student or a Teacher instance.
+
+2. PAGE STRUCTURE (React Component Overview)
+
+The React component structure consists of:
+
+- A main wrapper <div> styled as a card for layout and design.
+- A header <h2> displaying “Person Class Hierarchy”.
+- Two buttons: “Show Student” and “Show Teacher” that trigger state updates to display information.
+- A horizontal line <hr /> for separation.
+- A paragraph <p> that dynamically displays details based on which button is clicked.
+
+3. CSS LAYOUT & STYLING
+
+The design follows a clean and card-based layout:
+
+- A centered container styled with margin, padding, and a shadow.
+- Buttons styled with background color, hover effects, and spacing for clarity.
+- Typography is consistent with a bold header and normal body text.
+- Responsive design ensures it adapts to different screen sizes.
+
+4. COLOR SCHEME
+
+- Card Background: White.
+- Borders/Shadow: Light gray for subtle depth.
+- Buttons: Blue background with white text for strong visibility.
+- Text: Black for maximum readability.
+
+5. PAGE STRUCTURE VISUALIZATION
+
++----------------------------------------------+
+|          PERSON CLASS HIERARCHY              |
++----------------------------------------------+
+|   [ Show Student ]    [ Show Teacher ]       |
++----------------------------------------------+
+|                                              |
+| Student Example:                             |
+| Hi, I'm Roshan Kumar, and I'm 14 years old.  |
+| I study 8th Grade.                           |
+|                                              |
+| Teacher Example:                             |
+| Hi, I'm Mr. John, and I'm 40 years old.      |
+| I teach Math.                                |
++----------------------------------------------+
+
+6. FILE DISTRIBUTION
+
+src/App.tsx
+- React component implementing the UI for class hierarchy demonstration.
+- Contains Person, Student, and Teacher classes with inheritance logic.
+
+src/App.css
+- Styles specific to the Person Class Hierarchy component (container, buttons, text).
+
+src/main.tsx
+- React entry point rendering <App /> into the DOM.
+
+7. LEARNING OUTCOMES
+
+- Understanding ES6 class inheritance in JavaScript/TypeScript.
+- Implementing subclasses with additional properties and methods.
+- Managing state in React with hooks (useState).
+- Structuring modular and reusable React components with clear styling.

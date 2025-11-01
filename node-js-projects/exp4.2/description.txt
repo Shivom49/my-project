@@ -1,0 +1,51 @@
+This project demonstrates how to create a simple RESTful API using Node.js and the Express framework. The API manages a collection of playing cards stored in memory and supports the four main CRUD (Create, Read, Update, Delete) operations.
+
+Features Implemented
+
+Data Representation
+
+A sample in-memory card collection is maintained as an array of objects.
+
+Each card has:
+
+id: Unique identifier
+
+suit: The suit of the card (e.g., Hearts, Spades)
+
+value: The value of the card (e.g., Ace, King)
+
+API Endpoints
+
+GET /cards
+
+Returns the full list of cards in JSON format.
+
+POST /cards
+
+Adds a new card to the collection.
+
+Automatically assigns an incremental id.
+
+PUT /cards/:id
+
+Updates an existing card by its id.
+
+If the card is not found, returns a 404 error.
+
+DELETE /cards/:id
+
+Deletes a card from the collection by its id.
+
+If the card is not found, returns a 404 error.
+
+Error Handling
+
+Invalid id requests are handled gracefully with proper error messages.
+
+Ensures data integrity by validating existence before update or delete operations.
+
+Execution
+
+The server runs on http://localhost:3000.
+
+JSON is used for both request input and response output.

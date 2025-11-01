@@ -1,0 +1,39 @@
+Installed MongoDB and connected it using MongoDB Compass.
+
+Created a database named myshop and a collection named products in Compass.
+
+Initialized a new Node.js project using:
+
+npm init -y
+npm install express mongoose
+
+
+Created a file server.js and wrote code to:
+
+Connect Express server to MongoDB using Mongoose.
+
+Define a Product schema with fields (name, price, category).
+
+Implement CRUD routes:
+
+GET /products → fetch all products.
+
+POST /products → insert a new product.
+
+DELETE /products/:id → delete a product by ID.
+
+Started the server on http://localhost:3000
+ using:
+
+node server.js
+
+
+Tested CRUD APIs using Thunder Client in VS Code:
+
+Sent POST request with JSON body to add a product.
+
+Sent GET request to display all products.
+
+Sent DELETE request with product ID to remove a product.
+
+Verified results in MongoDB Compass, ensuring data was inserted, retrieved, and deleted correctly.

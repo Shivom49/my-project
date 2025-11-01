@@ -1,0 +1,86 @@
+    :root {
+        --bg-color-header: #5eb5c0;
+        
+    }
+
+    input:checked ~ .dashboard {
+        --bg-color-header: #4f2c50;
+        
+    }
+
+
+    .dashboard {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+    }
+
+    header {
+        grid-area: header;
+        background-color: var(--bg-color-header);
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        grid-area: sidebar;
+        background-color: #f4f4f4;
+        padding: 20px;
+        gap: 100px;
+    }
+
+    main {
+        border: 1px solid black;
+        background-color: white;
+        grid-area: main;
+        padding: 20px;
+    }
+
+    footer {
+        border: 1px solid black;
+        background-color: #FF692A;
+        grid-column: 1/span 2;
+        text-align: center;
+
+    }
+
+    .sidebar {
+        width: 200px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        position: fixed;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        gap: 100px;
+
+
+    }
+
+    .p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        color: #333333;
+    }
+
+    #darkModeToggle {
+        color: none;
+      
+    }
+
+
+
+
+
