@@ -3,7 +3,7 @@ name: My Project CI/CD Pipeline
 on:
   push:
     paths:
-      - 'docker-projects/exp9.1/**'   # sirf exp9.1 folder me change hone par trigger hoga
+      - 'docker-projects/exp9.1/**'
   pull_request:
     paths:
       - 'docker-projects/exp9.1/**'
@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-project:latest ./docker-projects/exp9.1
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-project:latest -f docker-projects/exp9.1/Dockerfile docker-projects/exp9.1
 
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/my-project:latest
