@@ -1,69 +1,49 @@
- FEATURE: Person Class Hierarchy Component
+CI/CD (Continuous Integration / Continuous Deployment) pipelines automate the process of building and delivering software applications.
+When developers push changes to the repository, GitHub Actions automatically runs workflows defined in .yml files to test, build, and deploy the application.
 
-The application demonstrates the concept of inheritance in JavaScript using ES6 classes within a React component.
+In this experiment, the pipeline performs the following:
 
-It introduces a base `Person` class with properties like name and age, along with subclasses `Student` and `Teacher` that extend `Person`.
+Builds the React project using Node.js.
 
-The React component (`App.tsx`) provides an interactive UI where users can click buttons to view details of either a Student or a Teacher instance.
+Runs tests to verify the build.
 
-2. PAGE STRUCTURE (React Component Overview)
+Builds a Docker image for the app.
 
-The React component structure consists of:
+Pushes the image to DockerHub using saved secrets (username and access token).
 
-- A main wrapper <div> styled as a card for layout and design.
-- A header <h2> displaying “Person Class Hierarchy”.
-- Two buttons: “Show Student” and “Show Teacher” that trigger state updates to display information.
-- A horizontal line <hr /> for separation.
-- A paragraph <p> that dynamically displays details based on which button is clicked.
+This ensures consistent and error-free deployment without manual intervention.
 
-3. CSS LAYOUT & STYLING
+Software/Tools Used:
 
-The design follows a clean and card-based layout:
+GitHub
 
-- A centered container styled with margin, padding, and a shadow.
-- Buttons styled with background color, hover effects, and spacing for clarity.
-- Typography is consistent with a bold header and normal body text.
-- Responsive design ensures it adapts to different screen sizes.
+GitHub Actions (for CI/CD automation)
 
-4. COLOR SCHEME
+Docker & DockerHub
 
-- Card Background: White.
-- Borders/Shadow: Light gray for subtle depth.
-- Buttons: Blue background with white text for strong visibility.
-- Text: Black for maximum readability.
+Node.js
 
-5. PAGE STRUCTURE VISUALIZATION
+VS Code
 
-+----------------------------------------------+
-|          PERSON CLASS HIERARCHY              |
-+----------------------------------------------+
-|   [ Show Student ]    [ Show Teacher ]       |
-+----------------------------------------------+
-|                                              |
-| Student Example:                             |
-| Hi, I'm Roshan Kumar, and I'm 14 years old.  |
-| I study 8th Grade.                           |
-|                                              |
-| Teacher Example:                             |
-| Hi, I'm Mr. John, and I'm 40 years old.      |
-| I teach Math.                                |
-+----------------------------------------------+
+Procedure:
+Phase 1 – Local Docker Setup (Exp 9.1 Recap)
 
-6. FILE DISTRIBUTION
+Created Dockerfile with two stages:
 
-src/App.tsx
-- React component implementing the UI for class hierarchy demonstration.
-- Contains Person, Student, and Teacher classes with inheritance logic.
+Build Stage: Used Node image to build React app.
 
-src/App.css
-- Styles specific to the Person Class Hierarchy component (container, buttons, text).
+Production Stage: Used Nginx image to serve build output.
 
-src/main.tsx
-- React entry point rendering <App /> into the DOM.
+Built the Docker image locally:
 
-7. LEARNING OUTCOMES
+docker build -t exp9.1 .
 
-- Understanding ES6 class inheritance in JavaScript/TypeScript.
-- Implementing subclasses with additional properties and methods.
-- Managing state in React with hooks (useState).
-- Structuring modular and reusable React components with clear styling.
+
+Verified the image:
+
+docker images
+
+
+Ran the container:
+
+docker run -p 8080:80 exp9.1
