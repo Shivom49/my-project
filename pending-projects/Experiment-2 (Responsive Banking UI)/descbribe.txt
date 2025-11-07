@@ -1,0 +1,46 @@
+in the exp 2 we have make dashbord for banking app in this we make two button Deposit and Withdraw the add css in the app we have add such as
+background colour , padding ,height , width ,justify-content border radius , and  text-align etc to make our app most attractived This project creates a simple banking interface using HTML and CSS. The interface displays a balance amount along with two interactive buttons for Deposit and Withdraw operations. Although the buttons do not perform real transactions (since no JavaScript or backend is implemented), the project focuses on the frontend design and layout.
+
+Features Implemented
+
+HTML Structure
+
+A container div centers the entire content on the page.
+
+Inside it, the inner-container holds:
+
+A Balance Display ($15 shown by default).
+
+Two action buttons: Deposit and Withdraw.
+
+CSS Styling & Layout
+
+The outer container (.container) uses Flexbox to center content both vertically and horizontally (justify-content: center; align-items: center; height: 100vh).
+
+The inner box (.inner-container) is styled with:
+
+Size: 500px × 500px
+
+Background color: aquamarine
+
+Rounded corners (border-radius: 20px)
+
+Flexbox column layout to align balance text and buttons.
+
+Balance section (.balance)
+
+Green text, larger font size, centered.
+
+Buttons section (.buttons)
+
+Uses column layout with gap: 10px for spacing.
+
+Each button styled with padding, rounded edges, and hover-friendly design.
+
+Deposit button = red, Withdraw button = green (colors can be swapped for clarity).
+
+Execution
+
+The interface opens in a web browser with the balance displayed at the center of the screen.
+
+Buttons are clickable but not functional (no transaction logic implemented).
