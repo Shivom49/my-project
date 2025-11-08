@@ -1,0 +1,30 @@
+/* 🌌 Full App Gradient Setup */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1f4037);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+  overflow-x: hidden;
+}
+
+/* 🌀 Animated Gradient Motion */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hide all scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}

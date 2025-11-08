@@ -1,3 +1,6 @@
+// Copyright (c) 2025 Shivom Parashari. All rights reserved.
+// Unauthorized use, distribution, or modification of this file is prohibited.
+
 const express = require('express');
 const Item = require('../models/item');
 const router = express.Router();

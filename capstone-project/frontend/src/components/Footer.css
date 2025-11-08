@@ -1,0 +1,34 @@
+/* © 2025 Shivom Parashari. All Rights Reserved. */
+
+.footer-container {
+  text-align: center;
+  padding: 1.2rem;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  color: #00f0ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.6px;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 6px #00f0ff, 0 0 12px #00b4ff;
+  animation: footerGlow 3s ease-in-out infinite alternate;
+}
+
+.footer-text {
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-name {
+  font-weight: 600;
+  color: #00b4ff;
+}
+
+@keyframes footerGlow {
+  from {
+    text-shadow: 0 0 8px #00f0ff, 0 0 20px #00b4ff;
+  }
+  to {
+    text-shadow: 0 0 18px #00f0ff, 0 0 35px #00b4ff;
+  }
+}

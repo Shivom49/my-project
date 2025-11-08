@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Shivom Parashari. All rights reserved.
+# Unauthorized use, distribution, or modification of this file is prohibited.
+
 import numpy as np
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors

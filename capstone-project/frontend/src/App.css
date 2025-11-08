@@ -1,0 +1,39 @@
+/* 🪩 Futuristic Neon Theme Overlay */
+.futuristic-bg {
+  background: linear-gradient(
+    145deg,
+    rgba(0, 255, 255, 0.08),
+    rgba(255, 0, 150, 0.08)
+  );
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 2rem;
+  margin: 1rem 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* 💎 Glowing Card */
+.card-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(0, 255, 255, 0.2),
+    0 0 60px rgba(0, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card-glow:hover {
+  transform: perspective(800px) rotateY(4deg) rotateX(3deg) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(255, 0, 150, 0.3);
+}
+
+/* ✨ Headline Glow */
+h2 {
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, #00e5ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
